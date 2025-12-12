@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Chinese Pasta",
+    "description": "Delicious pasta with chinese herbs.",
+    "price": "$15.99",
+    "img": "/img/menu/menuThumb1_1.png",
+    "categories": ["FreshPasta", "FastFood"]
+  },
+  {
+    "id": 2,
+    "title": "Chicken Fried Rice",
+    "description": "Fried rice with tender chicken pieces.",
+    "price": "$25.99",
+    "img": "/img/menu/menuThumb1_2.png",
+    "categories": ["FastFood"]
+  },
+  {
+    "id": 3,
+    "title": "Chicken Pizza",
+    "description": "Cheesy pizza with grilled chicken.",
+    "price": "$115.99",
+    "img": "/img/menu/menuThumb1_3.png",
+    "categories": ["ChickenPizza", "FastFood"]
+  },
+  {
+    "id": 4,
+    "title": "Chicken Noodles",
+    "description": "Spicy chicken noodles.",
+    "price": "$154.99",
+    "img": "/img/menu/menuThumb1_4.png",
+    "categories": ["FreshPasta"]
+  },
+  {
+    "id": 5,
+    "title": "Grilled Chicken",
+    "description": "Smoky grilled chicken legs.",
+    "price": "$55.99",
+    "img": "/img/menu/menuThumb1_5.png",
+    "categories": ["FastFood", "ChickenPizza"]
+  },
+  {
+    "id": 6,
+    "title": "Berry Juice",
+    "description": "Fresh organic berry juice.",
+    "price": "$65.99",
+    "img": "/img/menu/menuThumb1_6.png",
+    "categories": ["DrinkJuice"]
+  },
+  {
+    "id": 7,
+    "title": "Chicken White Rice",
+    "description": "Steamed rice with white chicken curry.",
+    "price": "$135.99",
+    "img": "/img/menu/menuThumb1_7.png",
+    "categories": ["FastFood"]
+  },
+  {
+    "id": 8,
+    "title": "Spatial Burger",
+    "description": "Double patty special burger.",
+    "price": "$95.99",
+    "img": "/img/menu/menuThumb1_8.png",
+    "categories": ["FastFood"]
+  },
+  {
+    "id": 9,
+    "title": "Vegetables Burger",
+    "description": "Healthy veggie burger.",
+    "price": "$75.99",
+    "img": "/img/menu/menuThumb1_9.png",
+    "categories": ["FastFood"]
+  },
+  {
+    "id": 10,
+    "title": "Fresh Orange Juice",
+    "description": "Freshly squeezed orange juice.",
+    "price": "$44.99",
+    "img": "/img/menu/menuThumb1_10.png",
+    "categories": ["DrinkJuice"]
+  }
+]
