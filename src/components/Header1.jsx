@@ -40,7 +40,7 @@ export default function Header1() {
             <div className="hidden sm:flex items-center gap-4 cs_header_social_links top-header-social-icon">
               <span className="text-white text-sm">Follow Us:</span>
 
-              <ul className="flex items-center gap-3 pb-0">
+              <ul className="flex items-center gap-3 pb-0 mb-0">
                 <li>
                   <a href="#" aria-label="Facebook" className="text-white hover:text-gray-300">
                     <i className="bi bi-facebook text-lg"></i>
