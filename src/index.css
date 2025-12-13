@@ -21,6 +21,8 @@
   --title-font: "Epilogue", sans-serif;
   --body-font: "Roboto", sans-serif;
   --icon-font: "Font Awesome 6 Pro";
+  --menu-card-width: 1200px;
+  --menu-center-img-width: 380px;
 }
 
 body {
@@ -1389,7 +1391,6 @@ a{
 
 
 
-
 /* breadcrumb / hero (top image) */
 .breadcumb-section{position:relative; overflow:hidden}
 .breadcumb-wrapper{
@@ -1457,6 +1458,7 @@ a{
   font-size:13px;
   letter-spacing:1px;
   justify-content:center;
+  text-transform: uppercase;
 }
 .menu-card .title{
   font-size:36px;
@@ -1470,7 +1472,7 @@ a{
   display:grid;
   grid-template-columns: 1fr var(--menu-center-img-width) 1fr;
   gap:40px;
-  align-items:start;
+  align-items:center; /* Vertically center the items relative to image */
 }
 
 /* list column */
@@ -1525,8 +1527,17 @@ a{
   font-weight:800;
   font-size:18px;
   margin:0;
-  color:#161616;
+  line-height: 1.2;
 }
+.menu-text .name a {
+    color:#161616;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.menu-text .name a:hover {
+    color: var(--accent);
+}
+
 .menu-text .desc{
   margin:4px 0 0;
   color:#7a7a7a;
@@ -1549,7 +1560,7 @@ a{
   justify-content:center;
 }
 .menu-center img{
-  width:var(--menu-center-img-width);
+  width:100%; /* Fill container defined by variable */
   height:auto;
   border-radius:8px;
   box-shadow: 0 12px 40px rgba(12,12,12,0.08);
@@ -1557,7 +1568,7 @@ a{
 }
 
 /* marquee / bottom spacing */
-.menu-card .marquee-wrapper{margin-top:34px}
+.menu-card .marquee-wrapper{margin-top:50px}
 
 /* responsive */
 @media (max-width:1100px){
@@ -1567,10 +1578,11 @@ a{
 @media (max-width:880px){
   .breadcumb-title{font-size:40px}
   .menu-card{padding:36px 20px}
-  .menu-grid{grid-template-columns:1fr; gap:18px}
-  .menu-center{order:-1}
+  .menu-grid{grid-template-columns:1fr; gap:30px}
+  /* Move image to top on mobile */
+  .menu-center{order:-1; margin-bottom: 20px;}
   .menu-center img{width:100%; max-width:420px}
-  .menu-list{padding-top:8px}
+  .menu-list{padding-top:0}
   .menu-row{gap:10px}
   .menu-thumb{width:56px; height:56px}
   .menu-price{margin-left:8px}
@@ -1579,4 +1591,3 @@ a{
 
 /* small niceties to match screenshot appearance */
 .menu-card .sub-title img{height:18px; vertical-align:middle}
-.menu-card .sub-title, .menu-card .title{display:block; text-align:center}
