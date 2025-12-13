@@ -652,6 +652,10 @@ a{
   font-weight: 800;
 }
 
+.cs_header_social_links ul{
+  padding-bottom: 0;
+}
+
 /* ------------------------------
    RESPONSIVE
 --------------------------------*/
@@ -1591,3 +1595,478 @@ a{
 
 /* small niceties to match screenshot appearance */
 .menu-card .sub-title img{height:18px; vertical-align:middle}
+
+/* --- Product Details Page Styles --- */
+
+/* Wrapper for the details card */
+.product-details-card {
+  padding: 60px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+/* Layout Grid (Simple Flexbox/Grid behavior) */
+.product-details-card .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.col-lg-6 {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Image Styling */
+.product-big-img {
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 40px;
+}
+.product-big-img img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  /* Optional: Drop shadow for food plate realism */
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+/* Right Side Content */
+.product-about .price-tag {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.product-about .product-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.product-about .text {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.product-meta {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+.product-meta .meta-label {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+/* Quantity and Button Wrapper */
+.actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Quantity Selector */
+.quantity-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.qty-btn {
+  background: #f9f9f9;
+  border: none;
+  width: 40px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.qty-btn:hover {
+  background: var(--theme);
+  color: #fff;
+}
+.qty-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  font-weight: 700;
+  -moz-appearance: textfield; /* Remove spinner on firefox */
+}
+
+/* Add to Cart Button */
+.th-btn {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 16px 32px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.th-btn:hover {
+  background-color: #111; /* Dark hover state */
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-details-card .row {
+    flex-direction: column;
+  }
+  .product-about .product-title {
+    font-size: 30px;
+  }
+  .product-details-card {
+    padding: 30px 20px;
+  }
+}
+
+.reservation-wrapper .get-in-touch h2 {
+  color: var(--title);
+  font-family: var(--title-font);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 105px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 575px) {
+  .reservation-wrapper .get-in-touch h2 {
+    font-size: 35px;
+    line-height: 55px;
+  }
+}
+
+.reservation-wrapper .get-in-touch .desc {
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+
+.reservation-wrapper .get-in-touch .contact-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.reservation-wrapper .get-in-touch .contact-info-wrapper .contact-info {
+  margin-bottom: 40px;
+}
+
+.reservation-wrapper .get-in-touch .contact-info-wrapper .contact-info h5 {
+  color: var(--title);
+  font-family: var(--title-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.reservation-wrapper .get-in-touch .contact-info-wrapper .contact-info p {
+  color: var(--title);
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+@media (max-width: 575px) {
+  .reservation-wrapper .get-in-touch .contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+/* --- Social Media Icons --- */
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.social-media li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: var(--title);
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.social-media li a:hover {
+  background-color: var(--theme);
+  color: #fff;
+}
+
+/* --- Right Side (Form Styling) --- */
+.reservation-form .contact-form {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.reservation-form .contact-form h2 {
+  font-family: var(--title-font);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--title);
+}
+
+.text-theme-color {
+  color: var(--theme);
+}
+
+.reservation-form label {
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--title);
+  display: block;
+}
+
+/* Input Fields */
+.reservation-form input,
+.reservation-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: var(--body-font);
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.reservation-form input:focus,
+.reservation-form textarea:focus {
+  border-color: var(--theme-color);
+}
+
+.fix {
+    overflow: hidden;
+}
+
+/* --- Contact Wrapper Styles --- */
+.contact-wrapper.style1 .container {
+  max-width: 1480px;
+}
+.contact-wrapper.style2 .container {
+  max-width: 1300px;
+}
+
+.contact-info-area {
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 50px;
+}
+@media (max-width: 1399px) {
+  .contact-info-area {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 80px;
+    justify-content: initial;
+  }
+}
+@media (max-width: 575px) {
+  .contact-info-area {
+    gap: 30px;
+  }
+}
+
+.contact-info-area .contact-info-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .contact-info-area .contact-info-items {
+    flex-wrap: wrap;
+  }
+}
+
+.contact-info-area .contact-info-items .icon {
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  position: relative;
+  border: 2px dotted var(--white);
+  border-radius: 50%;
+  font-size: 30px;
+  color: var(--white);
+}
+
+.contact-info-area .contact-info-items .content p {
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.contact-info-area .contact-info-items .content h3 {
+  font-size: 24px;
+  color: var(--white);
+  text-transform: initial;
+}
+
+.contact-info-area .contact-info-items .content h3 a {
+  color: var(--white);
+}
+
+/* --- Contact Box Styles --- */
+.contact-box.style1 {
+  padding: 41px 35px 35px 30px;
+  background-color: var(--white);
+  border: 1px solid rgba(235, 0, 41, 0.25);
+  border-radius: 8px;
+  height: 100%; /* Ensure equal height in flex row */
+}
+
+.contact-box.style1 .contact-icon {
+  margin-bottom: 25px;
+}
+
+.contact-box.style1 .contact-icon img {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 15px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(235, 0, 41, 0.25);
+  background: var(--bg2);
+}
+
+.contact-box.style1 .title {
+  color: var(--title);
+  text-align: center;
+  font-family: var(--title-font);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.contact-box.style1 p {
+  color: var(--text);
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/* --- Contact Form Section --- */
+.contact-form-section.style2 {
+  position: relative;
+  z-index: 5;
+  margin-bottom: -30rem;
+}
+.contact-form-wrapper.style2 .contact-form-thumb {
+  margin-left: -265px;
+}
+.contact-form-wrapper.style2 .contact-form-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form.style2 {
+  padding: 46px 42px 46px 38px;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0px 10px 60px rgba(0,0,0,0.05); /* Added shadow for better visibility */
+}
+
+.contact-form.style2 h2 {
+  color: var(--title);
+  font-family: var(--title-font);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 50px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.contact-form.style2 input,
+.contact-form.style2 .single-select,
+.contact-form.style2 textarea.form-control {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #D4DCFF;
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+}
+
+.contact-form.style2 textarea.form-control {
+  height: auto;
+}
+
+.contact-form.style2 .single-select {
+  height: 58px; /* Matched input height */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right .7em top 50%;
+  background-size: .65em auto;
+}
+
+@media (max-width: 575px) {
+  .contact-form.style2 {
+    padding: 30px;
+  }
+}
+
+/* Map */
+.map-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  line-height: 0; /* Remove bottom gap */
+}
+.map-wrapper iframe {
+  width: 100%;
+  filter: grayscale(100%); /* Optional: makes map black/white */
+}

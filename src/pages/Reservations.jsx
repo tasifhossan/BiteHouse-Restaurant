@@ -1,23 +1,100 @@
-import React, { useState } from "react";
+import React from 'react';
+import BreadCumb from "../components/menu/BreadCumb";
 
-export default function Reservations() {
-  const [name, setName] = useState("");
-  const [date, setDate] = useState("");
 
-  const submit = (e) => {
-    e.preventDefault();
-    alert(`Reservation for ${name} on ${date}`);
-    setName(""); setDate("");
-  };
+const Reservation = () => {
+    return (
+        <>
+            {/* Breadcrumb Section added at the top */}
+            <BreadCumb 
+                bgimg="/img/bg/breadcumb.jpg" 
+                Title="Reservation" 
+            />
 
-  return (
-    <div className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold">Book a Table</h1>
-      <form onSubmit={submit} className="mt-4 grid gap-3">
-        <input required value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className="border px-3 py-2 rounded" />
-        <input required value={date} onChange={(e) => setDate(e.target.value)} type="datetime-local" className="border px-3 py-2 rounded" />
-        <button className="bg-rose-600 text-white px-4 py-2 rounded">Reserve</button>
-      </form>
-    </div>
-  );
-}
+            <section className="reservation-section section-padding fix bg-[#f4f1ea]">
+                <div className="reservation-wrapper">
+                    <div className="container">
+                        <div className="row gy-5">
+                            {/* Left Side: Contact Info */}
+                            <div className="col-xl-6 d-flex align-items-center">
+                                <div className="get-in-touch">
+                                    <h2>GET IN TOUCH</h2>
+                                    <p className="desc">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore of magna aliqua. Ut enim ad minim veniam, made</p>
+                                    <div className="contact-info-wrapper">
+                                        <div className="contact-info">
+                                            <h5>Contact</h5>
+                                            <p>+012 3455 862 69</p>
+                                        </div>
+                                        <div className="contact-info">
+                                            <h5>Email</h5>
+                                            <p>bitehouse@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div className="contact-info-wrapper">
+                                        <div className="contact-info">
+                                            <h5>Address</h5>
+                                            <p>Chokbazar, Chattogram</p>
+                                        </div>
+                                        <div className="contact-info">
+                                            <h5>Follow</h5>
+                                            <ul className="social-media">
+                                                <li> <a href="https://www.facebook.com"> <i className="bi bi-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li> <a href="https://www.x.com"> <i className="bi bi-twitter-x"></i>
+                                                    </a> </li>
+                                                <li> <a href="https://www.youtube.com"> <i className="bi bi-youtube"></i> </a>
+                                                </li>
+                                                <li> <a href="https://www.linkedin.com"> <i className="bi bi-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right Side: Reservation Form */}
+                            <div className="col-xl-6">
+                                <div className="reservation-form">
+                                    <div className="contact-form style2">
+                                        <h2>Create A <span className="text-theme-color">Reservation</span> </h2>
+                                        <form className="row" action="#">
+                                            <div className="col-md-6">
+                                                <label className="mb-2" htmlFor="date">Select Date*</label>
+                                                <input id="date" type="date" className="form-control" />
+                                            </div>
+                                            <div className="col-md-6">
+                                                <label className="mb-2" htmlFor="time">Select Time*</label>
+                                                <input id="time" type="time" className="form-control" />
+                                            </div>
+                                            <div className="col-md-6">
+                                                <label className="mb-2" htmlFor="phone">Give Phone Number*</label>
+                                                <input id="phone" type="number" placeholder="Phone Number" className="form-control" />
+                                            </div>
+                                            <div className="col-md-6">
+                                                <label className="mb-2" htmlFor="service">Number of Guest*</label>
+                                                <input id="service" type="text" placeholder="Guest" className="form-control" />
+                                            </div>
+                                            <div className="col-12">
+                                                <label className="mb-2" htmlFor="message">Message</label>
+                                                <textarea id="message" className="form-control"
+                                                    placeholder="Write your message here..." rows="5"></textarea>
+                                            </div>
+                                            <div className="col-12 form-group mb-0 mt-4 text-center">
+                                                <button className="theme-btn w-100 text-center">BOOK A TABLE <i className="bi bi-arrow-right bg-transparent text-white"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+};
+
+export default Reservation;
